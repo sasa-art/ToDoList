@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ListController!
+{% endblock %}
+
+{% block body %}
+
+	{{ form_start(form) }}
+	{# {{ form_row(form.title, {'attr' : {'value': tache.title} }) }}
+						{{ form_row(form.description, {'attr' : {'value': tache.description} }) }}
+						{{ form_row(form.status, {'attr' : {'placeholder' : tache.status}}) }} #}
+
+
+	{{ form_end(form) }}
+	<a href="{{ path('delete', {'id': tache.id}) }}" class="btn btn-primary">Supprimer</a>
+{% endblock %}

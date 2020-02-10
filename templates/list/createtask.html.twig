@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme formTache 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+
+	<h1>Création d'une tâche</h1>
+
+	{{ form_start(formTache) }}
+
+	{{ form_row(formTache.title, {'attr' : {'placeholder' : "Titre de la tâche"}}) }}
+	{{ form_row(formTache.description, {'attr' : {'placeholder' : "Description de la tâche"}}) }}
+	{{ form_row(formTache.status, {'attr' : {'placeholder' : "Statut de la tâche"}}) }}
+
+
+	{{ form_end(formTache) }}
+
+{% endblock %}

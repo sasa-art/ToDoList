@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+{% for flashMessage in app.session.flashbag.get('info') %}
+	<div class="alert alert-success">
+		{{ flashMessage }}
+	</div>
+
+{% endfor %}
+
+
+<h1>Bienvenue sur la ToDoList !</h1>
+<p class="lead">ToDoList est un site qui permet de visualiser très facilement les tâches à effectuer. Vous pourrez avoir accès en un clic à la liste des tâches ainsi que leurs statuts. Mais ce n'est pas tout, vous avez la possibilité de : ajouter, supprimer ou modifier une tâche.</p>
+<hr class="my-4">
+
+
+<table class="taches" border="1" cellpadding="10" cellspacing="1" width="100%">
+	<tr>
+
+		<th width="30%" align="center">Titre de la tâche</th>
+		<th width="40%" align="center">Description</th>
+		<th width="10%" align="left">Date de création</th>
+		<th width="10%" align="left">Date de mise à jour</th>
+		<th width="10%" align="left">Statut</th>
+		<th width="10%" align="left">Modifier</th>
+
+	</tr>
+
+	{% for tache in taches %}
+		<tr>
+			<td align="center" valign="top">{{tache.title}}</td>
+			<td align="center" valign="top">{{tache.description}}</td>
+			<td align="left" valign="top">{{ tache.created_at|date("m/d/Y") }}</td>
+			<td align="left" valign="top">{{ tache.updated_at|date("m/d/Y") }}</td>
+			<td align="center" valign="top">{{tache.status}}</td>
+			<td>
+				<a href="{{ path('modifytask', {'id': tache.id}) }}" class="btn btn-primary">modifier</a>
+			</td>
+		</tr>
+	</td>
+</tr>{% endfor %}</table>{% endblock %}
