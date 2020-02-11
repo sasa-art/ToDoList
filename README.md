@@ -1,22 +1,22 @@
 # ToDoList
-# Titre du projet
-_(juste en dessous des badges sympatiques à placer)_
 
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)  [![forthebadge](http://forthebadge.com/images/badges/powered-by-electricity.svg)](http://forthebadge.com)
+Bonjour à tous!
 
-Une petite description du projet
+Ce projet a été réalisé dans le cadre d'un test-technique. C'est un site web permettant de créer, éditer, supprimer et lister une liste de taches à faire.
 
 ## Pour commencer
 
-Entrez ici les instructions pour bien débuter avec votre projet...
+*Créer la base de donnée
+Assurez vous d'être dans le dossier sur votre terminal, tapez la commande :
+symfony console doctrine:database:create (Utilise le client Symfony)
+Ou
+php bin/console doctrine:database:create (Sans le client Symfony)
 
+*Ensuite démarrer le serveur
+symfony server:start(Utilise le client Symfony)
+Ou
+php bin/console server:start (Sans le client Symfony)
 
-
-Ensuite vous pouvez montrer ce que vous obtenez au final...
-
-## Démarrage
-
-Dites comment faire pour lancer votre projet
 
 ## Fabriqué avec
 
@@ -25,4 +25,5 @@ Entrez les programmes/logiciels/ressources que vous avez utilisé pour développ
 _exemples :_
 Symfony 
 Boostrap
+SQL
 
