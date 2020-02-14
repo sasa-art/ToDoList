@@ -20,9 +20,6 @@ php bin/console server:start (Sans le client Symfony)
 
 ## Fabriqué avec
 
-Entrez les programmes/logiciels/ressources que vous avez utilisé pour développer votre projet
-
-_exemples :_
 Symfony 
 Boostrap
 SQL
